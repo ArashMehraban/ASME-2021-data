@@ -1,0 +1,86 @@
+################### EXODUS-II mesh#######################################
+############  
+#  Tube-8  #
+############
+reset
+#1) Create a Cylinder: volume 1
+create Cylinder height 100 radius 7.5 
+
+#2) Create another cylinder : volume 2
+create Cylinder height 100 radius 5
+
+#3) Subtract smaller radius cylinder from the larger: volume 2 from volume 1
+subtract volume 2 from volume 1
+
+#4) Make the entire holed-cylinder into a block.
+block 1 volume 1
+
+#5) Choose element type hex8 for the block created
+block 1 element type hex8 
+
+#6) Choose how fine of a mesh
+volume 1 size auto factor 4.2
+
+#7) Mesh the volume created
+mesh volume 1
+
+#auto factor 2.2 + numsplit 1 = 167K element
+#8) Mesh refinement
+#refine volume 1 numsplit 3 bias 1.0 depth 1 smooth 
+
+#9) Specifiy nodesets for boundary
+sideset 999 surface 9 #left
+sideset 998 surface 8 #right
+
+#10) export the mesh
+export mesh "/home/arash/asme-2021-paper/Tube8.exo" overwrite
+
+################### ABAQUS mesh#######################################
+############  
+#  Tube-20 #
+############
+reset
+#1) Create a Cylinder: volume 1
+create Cylinder height 10 radius 0.75 
+
+#2) Create another cylinder : volume 2
+create Cylinder height 10 radius 0.5 
+
+#3) Subtract smaller radius cylinder from the larger: volume 2 from volume 1
+subtract volume 2  from volume 1
+
+#4) Make the entire holed-cylinder into a block.
+block 1 volume 1
+
+#5) Choose element type hex8 for the block created
+block 1 element type hex8 
+
+#6) Refine mesh size if needed
+#    factor:  7    6    5    4.5    4      3.1     2.5
+#  elem num: 110  368  1176  1635  4180  12400  17670
+volume 1 size auto factor 5 #3.37 #7.75 #4.05
+
+#7) Mesh the volume created
+mesh volume 1
+
+#7.1) Use Hex20 elements
+block 1 element type hex20
+
+#auto factor 3.9 + numsplit 1 = 39K element
+#8) Mesh refinement
+#refine volume 1 numsplit 1 bias 1.0 depth 1 smooth 
+
+#9) Specifiy nodesets for boundary
+nodeset 999 surface 9 #left
+nodeset 998 surface 8 #right
+
+#10) Name boundary 
+nodeset 999 name 'LeftEnd'
+nodeset 998 name 'RightEnd'
+
+#11) export the mesh
+export abaqus "/home/arash/Desktop/Tube20_Node_Elem_us.inp" overwrite
+
+
+
+
