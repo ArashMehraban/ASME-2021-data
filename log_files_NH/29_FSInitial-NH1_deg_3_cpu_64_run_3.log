@@ -1,0 +1,10 @@
+    Problem Name                       : Hyperelasticity finite strain Initial config w/ dXref_dxinit, Grad(u) storage
+    Global nodes                       : 131544
+    Total KSP Iterations               : 2600
+    SNES Solve Time                    : 39.9273 (39.9273) sec
+    DoFs/Sec in SNES                   : 25.6978 (25.6978) million
+    Strain Energy                      : 2.996781524410e+09
+./elasticity on a mpich-O named noether with 64 processors, by arash Thu Apr  1 17:29:20 2021
+Time (sec):           4.085e+01     1.000   4.085e+01
+Event                Count      Time (sec)     Flop                              --- Global ---  --- Stage ----  Total   GPU    - CpuToGpu -   - GpuToCpu - GPU
+script run time: 48.738814639
