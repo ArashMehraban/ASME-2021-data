@@ -29,29 +29,29 @@ END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
 echo "script run time: "${DIFF} >> log_files_NH/"02_FSInitial-NH1_deg_1_cpu_64_run_3.log" 
 
-echo "running: FSInitial-NH1 degree: 1 on 64 cores run 1..."
+echo "running: FSInitial-NH2 degree: 1 on 64 cores run 1..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 1 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"03_FSInitial-NH1_deg_1_cpu_64_run_1.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 1 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"03_FSInitial-NH2_deg_1_cpu_64_run_1.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"03_FSInitial-NH1_deg_1_cpu_64_run_1.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"03_FSInitial-NH2_deg_1_cpu_64_run_1.log" 
 
-echo "running: FSInitial-NH1 degree: 1 on 64 cores run 2..."
+echo "running: FSInitial-NH2 degree: 1 on 64 cores run 2..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 1 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"04_FSInitial-NH1_deg_1_cpu_64_run_2.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 1 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"04_FSInitial-NH2_deg_1_cpu_64_run_2.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"04_FSInitial-NH1_deg_1_cpu_64_run_2.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"04_FSInitial-NH2_deg_1_cpu_64_run_2.log" 
 
-echo "running: FSInitial-NH1 degree: 1 on 64 cores run 3..."
+echo "running: FSInitial-NH2 degree: 1 on 64 cores run 3..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 1 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"05_FSInitial-NH1_deg_1_cpu_64_run_3.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 1 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"05_FSInitial-NH2_deg_1_cpu_64_run_3.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"05_FSInitial-NH1_deg_1_cpu_64_run_3.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"05_FSInitial-NH2_deg_1_cpu_64_run_3.log" 
 
 echo "running: FSCurrent-NH1 degree: 1 on 64 cores run 1..."
 START=$(date +%s.%N)
@@ -125,29 +125,29 @@ END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
 echo "script run time: "${DIFF} >> log_files_NH/"14_FSInitial-NH1_deg_2_cpu_64_run_3.log" 
 
-echo "running: FSInitial-NH1 degree: 2 on 64 cores run 1..."
+echo "running: FSInitial-NH2 degree: 2 on 64 cores run 1..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 2 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"15_FSInitial-NH1_deg_2_cpu_64_run_1.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 2 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"15_FSInitial-NH2_deg_2_cpu_64_run_1.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"15_FSInitial-NH1_deg_2_cpu_64_run_1.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"15_FSInitial-NH2_deg_2_cpu_64_run_1.log" 
 
-echo "running: FSInitial-NH1 degree: 2 on 64 cores run 2..."
+echo "running: FSInitial-NH2 degree: 2 on 64 cores run 2..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 2 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"16_FSInitial-NH1_deg_2_cpu_64_run_2.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 2 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"16_FSInitial-NH2_deg_2_cpu_64_run_2.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"16_FSInitial-NH1_deg_2_cpu_64_run_2.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"16_FSInitial-NH2_deg_2_cpu_64_run_2.log" 
 
-echo "running: FSInitial-NH1 degree: 2 on 64 cores run 3..."
+echo "running: FSInitial-NH2 degree: 2 on 64 cores run 3..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 2 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"17_FSInitial-NH1_deg_2_cpu_64_run_3.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 2 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"17_FSInitial-NH2_deg_2_cpu_64_run_3.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"17_FSInitial-NH1_deg_2_cpu_64_run_3.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"17_FSInitial-NH2_deg_2_cpu_64_run_3.log" 
 
 echo "running: FSCurrent-NH1 degree: 2 on 64 cores run 1..."
 START=$(date +%s.%N)
@@ -221,29 +221,29 @@ END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
 echo "script run time: "${DIFF} >> log_files_NH/"26_FSInitial-NH1_deg_3_cpu_64_run_3.log" 
 
-echo "running: FSInitial-NH1 degree: 3 on 64 cores run 1..."
+echo "running: FSInitial-NH2 degree: 3 on 64 cores run 1..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 3 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"27_FSInitial-NH1_deg_3_cpu_64_run_1.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 3 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"27_FSInitial-NH2_deg_3_cpu_64_run_1.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"27_FSInitial-NH1_deg_3_cpu_64_run_1.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"27_FSInitial-NH2_deg_3_cpu_64_run_1.log" 
 
-echo "running: FSInitial-NH1 degree: 3 on 64 cores run 2..."
+echo "running: FSInitial-NH2 degree: 3 on 64 cores run 2..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 3 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"28_FSInitial-NH1_deg_3_cpu_64_run_2.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 3 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"28_FSInitial-NH2_deg_3_cpu_64_run_2.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"28_FSInitial-NH1_deg_3_cpu_64_run_2.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"28_FSInitial-NH2_deg_3_cpu_64_run_2.log" 
 
-echo "running: FSInitial-NH1 degree: 3 on 64 cores run 3..."
+echo "running: FSInitial-NH2 degree: 3 on 64 cores run 3..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 3 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"29_FSInitial-NH1_deg_3_cpu_64_run_3.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 3 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"29_FSInitial-NH2_deg_3_cpu_64_run_3.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"29_FSInitial-NH1_deg_3_cpu_64_run_3.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"29_FSInitial-NH2_deg_3_cpu_64_run_3.log" 
 
 echo "running: FSCurrent-NH1 degree: 3 on 64 cores run 1..."
 START=$(date +%s.%N)
@@ -317,29 +317,29 @@ END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
 echo "script run time: "${DIFF} >> log_files_NH/"38_FSInitial-NH1_deg_4_cpu_64_run_3.log" 
 
-echo "running: FSInitial-NH1 degree: 4 on 64 cores run 1..."
+echo "running: FSInitial-NH2 degree: 4 on 64 cores run 1..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 4 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"39_FSInitial-NH1_deg_4_cpu_64_run_1.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 4 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"39_FSInitial-NH2_deg_4_cpu_64_run_1.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"39_FSInitial-NH1_deg_4_cpu_64_run_1.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"39_FSInitial-NH2_deg_4_cpu_64_run_1.log" 
 
-echo "running: FSInitial-NH1 degree: 4 on 64 cores run 2..."
+echo "running: FSInitial-NH2 degree: 4 on 64 cores run 2..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 4 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"40_FSInitial-NH1_deg_4_cpu_64_run_2.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 4 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"40_FSInitial-NH2_deg_4_cpu_64_run_2.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"40_FSInitial-NH1_deg_4_cpu_64_run_2.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"40_FSInitial-NH2_deg_4_cpu_64_run_2.log" 
 
-echo "running: FSInitial-NH1 degree: 4 on 64 cores run 3..."
+echo "running: FSInitial-NH2 degree: 4 on 64 cores run 3..."
 START=$(date +%s.%N)
-mpirun -n 64 ./elasticity -problem FSInitial-NH1 -degree 4 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"41_FSInitial-NH1_deg_4_cpu_64_run_3.log" 
+mpirun -n 64 ./elasticity -problem FSInitial-NH2 -degree 4 -mesh ./meshes/Tube8.exo -E 6.90e+10 -nu 0.3 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-07 -log_view  | grep "Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with" > log_files_NH/"41_FSInitial-NH2_deg_4_cpu_64_run_3.log" 
 command
 END=$(date +%s.%N)
 DIFF=$(echo "$END - $START" | bc)
-echo "script run time: "${DIFF} >> log_files_NH/"41_FSInitial-NH1_deg_4_cpu_64_run_3.log" 
+echo "script run time: "${DIFF} >> log_files_NH/"41_FSInitial-NH2_deg_4_cpu_64_run_3.log" 
 
 echo "running: FSCurrent-NH1 degree: 4 on 64 cores run 1..."
 START=$(date +%s.%N)
