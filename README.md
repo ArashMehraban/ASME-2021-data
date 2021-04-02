@@ -7,6 +7,6 @@ Run with `Python3`. It appears `python2` does not support `subprocess`
 
 `log_files_NH` folder contains the raw data for all 48 runs.
 
-Bendinf the tube in the `-Y` direction by `20mm` was performed. The tube is `100mm`
+Bending the tube in the `-Y` direction by `20mm` was performed. The tube is `100mm`
 
 ![plot](Tube8_l_999_r_998.png)
