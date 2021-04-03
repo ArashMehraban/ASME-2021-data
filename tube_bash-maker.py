@@ -58,7 +58,7 @@ for msh in meshNames:
                     output_file = "\"" + prefix[k] + "_" + prob + "_deg_" + str(p) + \
                                   "_cpu_" + str(np) + "_run_" + str(r) + ".log\" "
 #mpirun -n 16 ./elasticity -problem FSCurrent-NH2 -degree 3 -mesh ./meshes/Tube8.exo -nu 0.3 -E 1e8 -bc_clamp 998,999 -bc_clamp_998_translate 0,-2,0 -num_steps 25 -snes_linesearch_type cp -snes_rtol 1e-7 -snes_monitor -log_view
-                    f.write("mpirun -n " + str(np) + " ./elasticity -problem " + prob + " -degree " + str(p) + \
+                    f.write("mpiexec -bind-to core -map-by socket -n " + str(np) + " ./elasticity -problem " + prob + " -degree " + str(p) + \
                             " -mesh ./meshes/" + str(msh) +  \
                             " -E " + str(E) + " -nu " + str(nu) +  \
                             " -bc_clamp 998,999"  + " -bc_clamp_998_translate " + BC + \
