@@ -10,7 +10,7 @@ meshNames = ['Tube8.exo']
 nu = 0.3
 E = "{:.2e}".format(69e9)
 BC_sides = ['999', '998']
-BC = '0,-2,0'
+BC = '0,-20,0'
 num_steps = 25
 snes_rtol = 1e-7
 
