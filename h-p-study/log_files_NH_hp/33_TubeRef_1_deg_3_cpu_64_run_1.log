@@ -1,10 +1,10 @@
-    Problem Name                       : Hyperelasticity finite strain Current config w/ dXref_dxcurr, tau, constant storage
+    Problem Name                       : Hyperelasticity finite strain Current config Neo-Hookean w/ dXref_dxcurr, tau, constant storage
     Global nodes                       : 302172
-    Total KSP Iterations               : 4021
-    SNES Solve Time                    : 78.2232 (78.2232) sec
-    DoFs/Sec in SNES                   : 46.5987 (46.5987) million
-    Strain Energy                      : 3.008361288157e+09
-./elasticity on a mpich-O named noether with 64 processors, by arash Tue Apr  6 17:34:36 2021
-Time (sec):           7.869e+01     1.000   7.869e+01
+    Total KSP Iterations               : 6201
+    SNES Solve Time                    : 123.564 (123.563) sec
+    DoFs/Sec in SNES                   : 45.4932 (45.4933) million
+    Strain Energy                      : 4.491030052203e+11
+./elasticity on a mpich-O named noether with 64 processors, by arash Sat Apr 10 13:13:56 2021
+Time (sec):           1.246e+02     1.000   1.246e+02
 Event                Count      Time (sec)     Flop                              --- Global ---  --- Stage ----  Total   GPU    - CpuToGpu -   - GpuToCpu - GPU
-script run time: 87.191468480
+script run time: 133.111348098
