@@ -10,7 +10,7 @@ meshNames = ['Tube8_25int_0.exo', 'Tube8_25int_1.exo',  'Tube8_25int_2.exo',  'T
 nu = 0.3
 E = "{:.2e}".format(69e9)
 BC_sides = ['999', '998']
-BC = '0,-2,0'
+BC = '0,-20,0'
 num_steps = 25
 snes_rtol = 1e-7
 
@@ -48,7 +48,7 @@ k=0
 for p in degree:
     for np in nproc:
         for msh in meshNames:
-            if((p == 3 and msh == 'Tube8_25int_4.exo') or (p == 4 and msh == 'Tube8_25int_3.exo') or (p == 4 and msh == 'Tube8_25int_4.exo')):
+            if((p == 3 and msh == 'Tube8_25int_4.exo') or (p == 2 and msh == 'Tube8_25int_4.exo')):
                 continue
             for prob in problemName:
                 for r in range(1,repeat+1):
