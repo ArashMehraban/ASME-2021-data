@@ -3,7 +3,7 @@ import subprocess
 
 
 
-nproc = [64]
+nproc = [16]
 problemName = ['FSInitial-NH1','FSInitial-NH2','FSCurrent-NH1', 'FSCurrent-NH2']
 degree = [1,2,3,4]
 meshNames = ['Tube8.exo']
@@ -26,7 +26,7 @@ bash_file = "NH_runs.sh"
 
 #extract below keywords and values from code AND indicate which folder to store them in
 grep = " | grep \"Problem Name\|Strain Energy\|SNES Solve Time\|DoFs/Sec in SNES\|Total KSP Iterations\|Global nodes\|Time (sec)\|noether with\" > "
-folder_name = "log_files_NH/"
+folder_name = "log_files_NH_16_cpu"
 
 
 # Write bash file to be run 
