@@ -6,7 +6,7 @@ import subprocess
 nproc = [16]
 problemName = ['FSInitial-NH1','FSInitial-NH2','FSCurrent-NH1', 'FSCurrent-NH2']
 degree = [1,2,3,4]
-meshNames = ['Tube8.exo']
+meshNames = ['Tube8_25int_1.exo']
 nu = 0.3
 E = "{:.2e}".format(69e9)
 BC_sides = ['999', '998']
