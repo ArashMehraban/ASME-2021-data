@@ -151,22 +151,30 @@ def draw_time_table(df):
     p2 = df['deg']==2
     p3 = df['deg']==3
     p4 = df['deg']==4
-    ps = [p1,p2,p3,p4]
+    if (p2.eq(False).all()): #dirty trick for p1 runs (small mesh)
+        ps = [p1]
+        time = np.zeros((1,4))
+    else:
+        ps = [p1,p2,p3,p4]
+        time = np.zeros((4,4))
     #alg 
     alg1 = df['Alg']==1
     alg2 = df['Alg']==2
     alg3 = df['Alg']==3
     alg4 = df['Alg']==4
     algs = [alg1,alg2,alg3,alg4]
-    time = np.zeros((4,4))
+    
 
     for i in range(len(ps)):
         for j in range(len(algs)):
              time[i][j] = np.round(df.where((ps[i] & algs[j]))['Solve Time(s)'].dropna(), decimals = 2)
     print(time)
 
+def sort_by(df, sortby):
+    return df.sort_values([sortby], ascending = (True))
+
 def run_alg_perf():
-    folder_name = 'log_files_NH'
+    folder_name = 'log_files_NH_16_cpu'
     filename_ext = '.log'
     #idx: 0      1         2  3  4  5   6  7 
     #    00_FSInitial-NH1_deg_1_cpu_64_run_1.log
@@ -192,6 +200,9 @@ def run_alg_perf():
     df = create_df_NH_noether(filenames_data , files_data)
     print(df)
     draw_time_table(df)
+    sortby = 'deg'
+    df = sort_by(df,sortby)
+    print(df)
        
 
 if __name__ == "__main__":
